@@ -1,0 +1,250 @@
+.card {
+  padding: 30rpx 30rpx !important;
+  margin-top: 25% !important;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rpx !important;
+  /* border: 1px #eee dotted; */
+  /* border-radius: 20rpx; */
+}
+.ticket-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px #eee dotted;
+  border-radius: 20rpx;
+}
+
+.ticket-container-top {
+  /* display: flex; */
+  /* align-items: center; */
+  padding: 40rpx 30rpx;
+  /* justify-content: space-between; */
+}
+
+.word-head{
+  font-family: Chalkboard;
+  font-size: 80rpx;
+  line-height: 80rpx;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.phone-speak{
+  margin: 10rpx 0 10rpx 10rpx;
+  line-height: 40rpx;
+  font-family: Chalkboard;
+  font-size: 35rpx;
+  color: #8F8F8F;
+
+  /* display: flex; */
+  /* align-items: flex-end; */
+  /* color: #3963BC; */
+  /* line-height: 1; */
+}
+
+.ticket-container-bottom{
+  border-top: 1px #eee dashed;
+  padding: 6rpx 30rpx;
+}
+
+.ticket-container-bottom .title{
+  width: 100%;
+  font-size: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
+}
+
+.ticket-container-bottom text{
+  font-size: 22rpx;
+  color: #999;
+}
+
+.l-title-class{
+  padding-left: 0rpx !important;
+  padding-right: 0rpx !important;
+}
+
+.l-body-class{
+  padding-left: 0 !important;
+}
+
+.ticket-detail-container{
+  display: flex;
+  align-items: center;
+}
+
+.ticket-detail-container l-icon{
+  margin-left: 6rpx;
+}
+
+.word-trans, .word-sentence{
+  border-top: 1px #eee dashed;
+  padding: 6rpx 0;
+}
+
+.word-trans-title, .word-sentence-title{
+  font-family: PingFangSC-Medium;
+  font-size: 28rpx;
+  color: #999;
+  /* transform: skew(-10deg, 0deg); */
+}
+.word-trans-content, .word-sentence-content{
+  font-family: PingFangSC-Light;
+  font-size: 24rpx;
+  line-height: 25rpx;
+  color: #000000;
+  transform: skew(-10deg, 0deg);
+}
+
+/* .word-sentence{
+  border-top: 1px #eee dashed;
+  padding: 6rpx 30rpx;
+} */
+
+/* .word-content{
+
+} */
+
+
+
+.botton-view {
+  padding: 0 0 25% 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display:flex;
+  width:100%;
+  justify-content:center;
+}
+
+.botton-view l-button{
+  margin: 0 auto;
+  box-shadow:0 20rpx 20rpx 0 rgba(212,217,223,.5);
+}
+
+
+
+
+
+
+/* .content {
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  line-height: 92rpx
+}
+
+.test-img{
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.style-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 200rpx;
+}
+
+.txt {
+  color: #3963bc;
+  font-size: 28rpx;
+}
+
+.remark {
+  color: #8a8a8a;
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+
+.content-con {
+  display: flex;
+  height: 80rpx;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box {
+  width: 140rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-box {
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 8px 0px rgba(220, 220, 220, 0.5);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12rpx;
+  box-sizing: border-box;
+  height: 72rpx;
+  width: 180rpx;
+  font-size: 28rpx;
+  background-color: #fff;
+  color: #34bfa3;
+  border: 2rpx solid #34bfa3;
+  border-radius: 9.6rpx;
+  margin-bottom: 20rpx;
+}
+
+.con{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.title_css {
+  padding-top: 10vh;
+  padding-bottom: 50vh;
+}
+
+.page {
+  width: 100%;
+  overflow: hidden;
+}
+
+.box {
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.cu-btn {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-top: 2vh;
+}
+
+.margin-top {
+  margin-top: 2vh;
+}
+
+.padding-conj {
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+}
+
+.bg-mauve {
+  margin-top: 1vh;
+} */

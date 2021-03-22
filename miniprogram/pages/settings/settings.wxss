@@ -1,0 +1,62 @@
+.top-card{
+  height: 230rpx;
+  width: 750rpx;
+  background: #1839f2;
+  border-radius: 0 0 20rpx 20rpx;
+  box-shadow: 0px 4px 20px 0px rgba(0, 49, 107, 0.3);
+  box-sizing: border-box;
+}
+.user-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-name{
+  color: #f3f3f3 !important;
+  font-size: 40rpx;
+}
+.settings-card{
+  padding: 30rpx 40rpx !important;
+  margin-top: 30rpx !important;
+  margin-bottom: 200rpx !important;
+}
+
+/* .page {
+  width: 100%;
+  overflow: hidden;
+}
+
+.text-sm {
+  padding-top: 0.3vh;
+  padding-bottom: 0.3vh;
+}
+
+.button-sp-area {
+  margin: 0 auto;
+  padding-top: 15px;
+  width: 60%;
+}
+
+.page__title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.title_css {
+  padding-top: 10vh;
+  padding-bottom: 50vh;
+}
+
+.text-xs-pos {
+  margin-top: 1vh;
+}
+
+
+.text-help {
+  line-height: 180%;
+  margin-left: 1.5vh;
+  margin-right: 1.5vh;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  text-align: justify;
+} */

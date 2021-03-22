@@ -1,0 +1,31 @@
+<!-- <l-tab-bar text-color="#bbbbbb" list="{{list}}" /> -->
+<view class="container">
+  <view class="header">
+    <!-- <image class='header-bg' src='/images/static/index_bg.png'></image> -->
+    <!-- <text class='header-desc'><text class='header-name'>Worday📚</text></text> -->
+    <text class='header-desc'>Worday📚</text>
+  </view>
+  <view class="main">
+    <l-card l-class="card" type="primary" plaintext="{{true}}">
+      <text class="title">考研单词\nVocabulary</text>
+      <l-grid>
+          <l-grid-item key="one" slot="one">
+            <view class="text">有印象的单词</view>
+            <view class="num">3</view>
+          </l-grid-item>
+          <l-grid-item key="two" slot="two">
+            <view class="text">今日新词</view>
+            <view class="num">134</view>
+          </l-grid-item>
+          <l-grid-item key="three" slot="three">
+            <view class="text">今日待复习</view>
+            <view class="num">1648</view>  
+          </l-grid-item>
+      </l-grid>
+      <view class="button">
+        <l-button l-class="button-one" plain shape="semicircle" bind:lintap = "start">认单词</l-button>
+        <l-button l-class="button-two" plain shape="semicircle" bind:lintap = "start_reverse">默单词</l-button>
+    </view>
+    </l-card>
+  </view>
+</view>

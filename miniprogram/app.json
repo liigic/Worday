@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/exercise/exercise",
+    "pages/vocabulary/vocabulary",
+    "pages/settings/settings",
+    "pages/exercise/spell_vocab/spell_vocab",
+    "pages/exercise/learn_vocab/learn_vocab",
+    "pages/exercise/mission_completed/mission_completed",
+    "pages/vocabulary/search_result/search_result",
+    "pages/vocabulary/result_list/result_list",
+    "pages/settings/exercise_set/exercise_set",
+    "pages/settings/help/help",
+    "pages/settings/subscribe/subscribe",
+    "pages/settings/about/about",
+    "pages/test/test"
+  ],
+  "tabBar": {
+    "color": "#bbbbbb",
+    "selectedColor": "#1839f2",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/exercise/exercise",
+        "text": "练习",
+        "iconPath": "/images/tabbar/exercise.png",
+        "selectedIconPath": "/images/tabbar/exercise-select.png"
+      },
+      {
+        "pagePath": "pages/vocabulary/vocabulary",
+        "text": "查词",
+        "iconPath": "/images/tabbar/vocabulary.png",
+        "selectedIconPath": "/images/tabbar/vocabulary-select.png"
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "text": "设置",
+        "iconPath": "/images/tabbar/settings.png",
+        "selectedIconPath": "/images/tabbar/settings-select.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "Worday",
+    "navigationBarBackgroundColor": "#1839f2",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom",
+    "content-card": "/components/content-card/index",
+    "content-title": "/components/content-title/index",
+    "l-card":"/lin-ui/card/index",
+    "l-grid-item": "/lin-ui/grid-item/index",
+    "l-grid": "/lin-ui/grid/index",
+    "l-button": "/lin-ui/button/index",
+    "l-icon": "/lin-ui/icon/index",
+    "l-collapse": "/lin-ui/collapse/index",
+    "l-collapse-item": "/lin-ui/collapse-item/index",
+    "l-search-bar":"/lin-ui/search-bar/index",
+    "l-avatar":"/lin-ui/avatar/index",
+    "l-list":"/lin-ui/list/index"
+
+
+
+    
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,57 @@
+<!-- <l-tab-bar text-color="#bbbbbb" list="{{list}}" /> -->
+<view class="container">
+  <view class="top-card">
+    <view class="user-info">
+      <l-avatar l-class="user-avatar" l-text-class="user-name" size="120" placement="bottom" open-data="{{['userAvatarUrl','userNickName']}}" />
+    </view>
+  </view>
+  
+  <l-card l-class="settings-card" type="primary" plaintext="{{true}}">
+    <l-list title="背单词设置" icon="setting" url="../settings/exercise_set/exercise_set"/>
+    <l-list title="学习提醒" icon="notification" url="../settings/subscribe/subscribe"/>
+    <l-list title="使用帮助" icon="help" url="../settings/help/help"/>
+    <l-list title="关于" icon="like" url="../settings/about/about"/>
+  </l-card>
+
+</view>
+
+<!-- <view class=" padding radius text-center shadow-blur title_css page {{dark_mode==true?'blk-bg-black':'bg-gradual-blue'}}">
+
+  <view class="cu-bar solid-bottom margin-top  {{dark_mode==true?'blk-bg-grey2':'bg-red light'}}">
+    <view class='action'>
+      <text class="icon-title  {{dark_mode==true?'blk-text-white':'text-red'}}"></text>个性化
+    </view>
+  </view>
+
+  <view class="cu-list menu {{dark_mode==true?'menu-dark':''}}">
+    <view class="cu-item">
+      <text class="{{dark_mode==true?'blk-text-white':'text-grey'}}">🌜 黑夜模式</text>
+      <switch checked="{{dark_mode}}" bindchange="dark_mode" />
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class="content text-left" hover-class="none" url="../settings/exercise_set/exercise_set" open-type="navigate">
+        <text class="{{dark_mode==true?'blk-text-white':'text-grey'}}">🔮 背单词设置</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class="content text-left" hover-class="none" url="../settings/subscribe/subscribe" open-type="navigate">
+        <text class="{{dark_mode==true?'blk-text-white':'text-grey'}}">⏱ 学习提醒</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class="content text-left" hover-class="none" url="../settings/help/help" open-type="navigate">
+        <text class="{{dark_mode==true?'blk-text-white':'text-grey'}}">❓ 使用帮助</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow bg-white-last">
+      <navigator class="content text-left" hover-class="none" url="../settings/about/about" open-type="navigate">
+        <text class="{{dark_mode==true?'blk-text-white':'text-grey'}}">👦 关于</text>
+      </navigator>
+    </view>
+  </view>
+
+</view> -->
