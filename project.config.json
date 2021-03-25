@@ -59,5 +59,14 @@
   },
   "scripts": {
     "beforeUpload": "npx lin-ui-cli load"
+  },
+  "packOptions": {
+    "ignore": [{
+        "type": "file",
+        "value": "linui.config.json"
+    }, {
+        "type": "file",
+        "value": ".gitignore"
+    }]
   }
 }
