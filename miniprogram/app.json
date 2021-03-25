@@ -11,8 +11,7 @@
     "pages/settings/exercise_set/exercise_set",
     "pages/settings/help/help",
     "pages/settings/subscribe/subscribe",
-    "pages/settings/about/about",
-    "pages/test/test"
+    "pages/settings/about/about"
   ],
   "tabBar": {
     "color": "#bbbbbb",
@@ -48,18 +47,16 @@
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom",
-    "content-card": "/components/content-card/index",
-    "content-title": "/components/content-title/index",
-    "l-card":"/lin-ui/card/index",
-    "l-grid-item": "/lin-ui/grid-item/index",
-    "l-grid": "/lin-ui/grid/index",
-    "l-button": "/lin-ui/button/index",
-    "l-icon": "/lin-ui/icon/index",
-    "l-collapse": "/lin-ui/collapse/index",
-    "l-collapse-item": "/lin-ui/collapse-item/index",
-    "l-search-bar":"/lin-ui/search-bar/index",
-    "l-avatar":"/lin-ui/avatar/index",
-    "l-list":"/lin-ui/list/index"
+    "l-card":"/miniprogram_npm/lin-ui/card/index",
+    "l-grid-item": "/miniprogram_npm/lin-ui/grid-item/index",
+    "l-grid": "/miniprogram_npm/lin-ui/grid/index",
+    "l-button": "/miniprogram_npm/lin-ui/button/index",
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index",
+    "l-collapse": "/miniprogram_npm/lin-ui/collapse/index",
+    "l-collapse-item": "/miniprogram_npm/lin-ui/collapse-item/index",
+    "l-search-bar":"/miniprogram_npm/lin-ui/search-bar/index",
+    "l-avatar":"/miniprogram_npm/lin-ui/avatar/index",
+    "l-list":"/miniprogram_npm/lin-ui/list/index"
 
 
 
