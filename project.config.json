@@ -56,5 +56,8 @@
     "miniprogram": {
       "list": []
     }
+  },
+  "scripts": {
+    "beforeUpload": "npx lin-ui-cli load"
   }
 }
