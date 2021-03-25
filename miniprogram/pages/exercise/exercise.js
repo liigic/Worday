@@ -39,10 +39,10 @@ Page({
     })
   },
 
-  //默单词
-  start_reverse: function() {
+  //查单词
+  search: function() {
     wx.navigateTo({
-      url: 'spell_vocab/spell_vocab',
+      url: '../vocabulary/vocabulary',
     })
   },
 

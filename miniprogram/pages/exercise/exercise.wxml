@@ -24,7 +24,7 @@
       </l-grid>
       <view class="button">
         <l-button l-class="button-one" plain shape="semicircle" bind:lintap = "start">认单词</l-button>
-        <l-button l-class="button-two" plain shape="semicircle" bind:lintap = "start_reverse">默单词</l-button>
+        <l-button l-class="button-two" plain shape="semicircle" bind:lintap = "search">查单词</l-button>
     </view>
     </l-card>
   </view>
