@@ -3,25 +3,27 @@
 <view class="container">
   <view class="saerch-card">
     <view class="searchbar">
-      <l-search-bar l-cancel-class="text-cancel" placeholder="搜索" bg-color="#f3f3f3" shape="circle"/>
+      <l-search-bar l-cancel-class="text-cancel" placeholder="搜索" bg-color="#f3f3f3" shape="circle"
+        bind:linchange="get_word" />
     </view>
   </view>
-  <!-- <view class="words-list">
-    <l-index-list scroll-top="{{scrollTop}}">
-      <view>
-          <l-index-anchor>A</l-index-anchor>
-          <view>鞍山</view>
-          <view>安庆</view>
-          <view>安阳</view>
+  <view class="container">
+    <scroll-view class='box' scroll-y bindscrolltoupper="evupper" bindscrolltolower="evlower">
+      <view wx:if="{{results}}" >
+        <view class='item' wx:for="{{results}}" wx:key="unique" bindtap="goWord" data-word="{{item.word}}" data-translation="{{item.translation}}">
+          <view class='item-name' >单词：{{item.word}}</view>
+          <view class='item-name'></view>
+          <view class='item-name'>释义：{{item.translation}}</view>
+          <view class='item-name'></view>
+          <view class='item-name'></view>
+        </view>
       </view>
+      <view wx:else>
+        <view class="tt_title">
+          <text>需要输入查询的单词 or 找不到该单词</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
 
-      <view>
-          <l-index-anchor>B</l-index-anchor>
-          <view>鞍山</view>
-          <view>安庆</view>
-          <view>安阳</view>
-      </view>
-    </l-index-list>
-  </view> -->
-  
 </view>

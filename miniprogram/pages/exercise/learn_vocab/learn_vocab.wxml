@@ -14,7 +14,7 @@
       </view>
       <view class="word-container-bottom">
         <l-collapse>
-          <l-collapse-item l-body-class="l-body-class" l-title-class="l-title-class" customTitle="{{true}}" bind:linexpand="show">
+          <l-collapse-item l-body-class="l-body-class" l-title-class="l-title-class" customTitle="{{true}}">
             <view class="title" slot="title">
               <view class="word-detail-container">
                 <text>查看释义&例句</text>
@@ -37,7 +37,7 @@
     </view>
   </l-card>
   <view class="botton-view">
-    <l-button l-class="btn-error" type="default" width="230" height="92" shape="circle" plain="{{true}}" bg-color="#f3f4f5" bind:lintap="show" bind:lintap="dont_konw">不认识</l-button>
-    <l-button l-class="btn-success"type="default" width="230" height="92" shape="circle" bg-color="#2c3c65" bind:lintap="next">下一个</l-button>
+    <l-button l-class="btn-error" type="default" width="230" height="92" shape="circle" plain="{{true}}" bg-color="#f3f4f5" bind:lintap="dont_konw">不认识</l-button>
+    <l-button l-class="btn-success"type="default" width="230" height="92" shape="circle" bg-color="#2c3c65" bind:lintap="next_vocab">下一个</l-button>
   </view>
 </view>

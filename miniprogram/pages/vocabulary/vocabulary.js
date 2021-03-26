@@ -6,6 +6,7 @@ Page({
    */
   data: {
     scrollTop: undefined,
+    results: null,
   },
   onTapWord(e) {
 
@@ -14,6 +15,41 @@ Page({
   onPageScroll(res) {
     this.setData({
       scrollTop: res.scrollTop,
+    })
+  },
+  get_word(e) {
+    console.log(e)
+    let that = this
+    let check_word = e.detail.value
+    if (check_word != '') {
+      wx.cloud.callFunction({
+        name: 'checkWord',
+        data: {
+          check_word: check_word
+        }
+      }).then(res => {
+        // if (res.result.data.length > 0)
+        console.log(res)
+        let data = res.result.data.data
+        if (data.length > 0)
+          that.setData({
+            results: data
+          })
+        else
+          that.setData({
+            results: null
+          })
+      })
+    } else {
+      that.setData({
+        results: null
+      })
+    }
+  },
+  goWord(e) {
+    console.log(e)
+    wx.navigateTo({
+      url: './search_result/search_result?word=' + e.currentTarget.dataset.word + '&translation=' + e.currentTarget.dataset.translation,
     })
   },
 
@@ -73,5 +109,3 @@ Page({
 
   }
 })
-
-

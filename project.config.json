@@ -40,6 +40,21 @@
   "appid": "wxa14ecb5f7922a849",
   "projectname": "Worday",
   "libVersion": "2.16.0",
+  "scripts": {
+    "beforeUpload": "npx lin-ui-cli load"
+  },
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "file",
+        "value": "linui.config.json"
+      },
+      {
+        "type": "file",
+        "value": ".gitignore"
+      }
+    ]
+  },
   "condition": {
     "search": {
       "list": []
@@ -56,17 +71,5 @@
     "miniprogram": {
       "list": []
     }
-  },
-  "scripts": {
-    "beforeUpload": "npx lin-ui-cli load"
-  },
-  "packOptions": {
-    "ignore": [{
-        "type": "file",
-        "value": "linui.config.json"
-    }, {
-        "type": "file",
-        "value": ".gitignore"
-    }]
   }
 }

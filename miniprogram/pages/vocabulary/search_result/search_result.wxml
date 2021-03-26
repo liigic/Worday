@@ -4,10 +4,10 @@
   </view>
   <l-card l-class="card" type="primary" plaintext="{{true}}" >
     <view class="word-container">
-      <view class="word-head">headword</view>
+      <view class="word-head">{{word}}</view>
       <view class="word-trans">
         <view class="word-trans-title">释义</view>
-        <view class="word-trans-content">n.释义</view>
+        <view class="word-trans-content">{{translation}}</view>
       </view>
     </view>
   </l-card>

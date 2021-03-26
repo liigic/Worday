@@ -18,7 +18,7 @@ App({
 
     // wx.setNavigationBarColor({
     //   frontColor: '#000000',
-	  //   backgroundColor: '#ffffff'
+    //   backgroundColor: '#ffffff'
     // })
 
     // wx.getSystemInfo({

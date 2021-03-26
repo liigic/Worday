@@ -1,4 +1,4 @@
-.saerch-card{
+.saerch-card {
   height: 230rpx;
   width: 750rpx;
   background: #2c3c65;
@@ -7,12 +7,66 @@
   box-sizing: border-box;
 }
 
-.searchbar{
+.searchbar {
   position: absolute;
   width: 100%;
   margin: 75rpx 0;
 }
 
-.text-cancel{
+.text-cancel {
   color: #f3f3f3 !important;
 }
+
+/* 实时刷新 */
+
+.title {
+  line-height: 70rpx;
+  font-size: 35rpx;
+  background: #eeeeee;
+}
+
+.tt_title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #000000;
+  margin: 30rpx;
+  text-align: center;
+}
+
+.box {
+  background: #ffffff;
+
+  height: 1080rpx;
+}
+
+.list {
+  padding: 20rpx 0;
+}
+
+.item {
+  padding: 0 50rpx;
+  margin-bottom: 20rpx;
+  background: #dddddd;
+}
+
+.item-name {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+}
+
+.item-box {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+}
+
+.item-status {
+  float: left;
+}
+
+.item-time {
+  float: right;
+}
+
+/*下拉刷新上拉加载  */
