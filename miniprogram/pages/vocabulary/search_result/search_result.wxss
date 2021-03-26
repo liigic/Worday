@@ -1,15 +1,104 @@
-/* pages/lab/lab_index_result.wxss */
-.title_css {
-  padding-top: 10vh;
-  padding-bottom: 50vh;
+.header {
+  height: 80rpx;
+  width: 750rpx;
+  background: #2c3c65;
+  border-radius: 0 0 55rpx 55rpx;
+  box-shadow: 0px 6px 28px 0px #2c3c65;
+  box-sizing: border-box;
 }
 
-.page {
+.header-desc {
+  position: absolute;
+  margin-left: 210rpx;
+  z-index: 2;
+  color: #8F8F8F;
+  line-height: 25rpx;
+  font-size: 25rpx;
+  transform: skew(-10deg, 0deg);
+}
+
+.card {
+  padding: 30rpx 30rpx !important;
+  margin-top: 15% !important;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rpx !important;
+}
+
+.word-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px #2c3c65 dotted;
+  border-radius: 20rpx;
+  padding: 40rpx 40rpx;
+}
+
+.word-head{
+  font-family: Chalkboard;
+  font-size: 80rpx;
+  line-height: 80rpx;
+  color: #2c3c65;
+}
+
+.word-container-bottom{
+  border-top: 1px #2c3c65 dashed;
+  padding: 6rpx 30rpx;
+}
+
+.word-container-bottom .title{
   width: 100%;
-  overflow: hidden;
+  font-size: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
 }
 
-.padding-conj {
-  padding-bottom: 3vh;
-  padding-top: 3vh;
+.word-container-bottom text{
+  font-size: 22rpx;
+  color: #999;
+}
+
+.l-title-class{
+  padding-left: 0rpx !important;
+  padding-right: 0rpx !important;
+}
+
+.l-body-class{
+  padding-left: 0 !important;
+}
+
+
+
+.word-trans{
+  border-top: 1px #2c3c65 dashed;
+  padding: 30rpx 0;
+  margin-top: 20rpx;
+}
+
+.word-trans-title{
+  font-family: PingFangSC-Medium;
+  font-size: 30rpx;
+  line-height: 35rpx;
+  color: #999;
+}
+
+.word-trans-content{
+  font-family: PingFangSC-Light;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  color: #2c3c65;
+  transform: skew(-10deg, 0deg);
+}
+
+.btn-box {
+  padding: 0 0 25% 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display:flex;
+  justify-content:center;
+}
+
+.btn-box l-button{
+  box-shadow:0 20rpx 20rpx 0 rgba(212,217,223,.5);
 }

@@ -1,11 +1,9 @@
 .saerch-card{
   height: 230rpx;
   width: 750rpx;
-  /* background: #3963BC; */
-  background: #1839f2;
-
-  border-radius: 0 0 20rpx 20rpx;
-  box-shadow: 0px 4px 20px 0px rgba(0, 49, 107, 0.3);
+  background: #2c3c65;
+  border-radius: 0 0 55rpx 55rpx;
+  box-shadow: 0px 6px 28px 0px #2c3c65;
   box-sizing: border-box;
 }
 
@@ -18,52 +16,3 @@
 .text-cancel{
   color: #f3f3f3 !important;
 }
-
-
-/* .title_css {
-  padding-top: 15vh;
-  padding-bottom: 100vh;
-}
-
-.search-conj {
-  margin-bottom: 2vh;
-}
-
-.btn-conj {
-  margin-bottom: 1vh;
-}
-
-.cu-bar {
-  border-top-left-radius: 5vw;
-  border-top-right-radius: 5vw;
-  border-bottom-left-radius: 5vw;
-  border-bottom-right-radius: 5vw;
-}
-
-.cu-bar.btn-group-nm {
-  justify-content: space-around;
-}
-
-.cu-bar.btn-group-nm button {
-  padding: 40rpx 1rpx;
-}
-
-.cu-bar.btn-group-nm button {
-  flex: 1;
-  margin: 0 10rpx;
-  max-width: 100%;
-}
-
-.page {
-  width: 100%;
-  overflow: hidden;
-}
-
-.text-margin {
-  margin-left: 2vw;
-  padding-bottom: 1vh;
-  margin-bottom: 1vh;
-  border-bottom: dashed;
-  border-bottom-color: white;
-  border-bottom-width: 1px;
-} */

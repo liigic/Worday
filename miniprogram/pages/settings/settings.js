@@ -10,14 +10,66 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    var that = this;
-    
-    wx.setNavigationBarTitle({
-      title: ""//页面标题为路由参数
-    })
+  onLoad: function () {
+  
   },
+ //学习提醒
+  subscribe: function (e) {
+    wx.requestSubscribeMessage({
+      tmplIds: ['rAL1dIT5XEigQKmW14Ulxw24couywZ6su6jNUhdVNn4'],
+      success(res) {
+        console.log(res)
+        if (res.errMsg == "requestSubscribeMessage:ok") {
+          console.log(app.globalData.openid)
+          const db = wx.cloud.database()
+          db.collection('subscribeMessages').where({
+            touser: app.globalData.openid,
+            done: false
+          }).get({
+            success: function (res) {
+              console.log(res)
 
+              if (res.data.length != 0) {
+                wx.showToast({
+                  title: '您已设置过',
+                  icon: 'none',
+                  duration: 1500
+                })
+              }
+
+              if (res.data.length == 0) {
+                wx.cloud.callFunction({
+                  touser: app.globalData.openid,
+                  name: "subscribe",
+                  data: {},
+                  success: function (res) {
+                    console.log(res.result)
+                    wx.showToast({
+                      title: '设置成功',
+                      icon: 'success',
+                      duration: 1500
+                    })
+                  },
+                  fail: console.error
+                })
+              }
+            }
+          });
+        } else {
+          wx.showToast({
+            title: '设置失败',
+            icon: 'none',
+            duration: 1500
+          })
+        }
+      }
+    })
+
+    if (getCurrentPages().length != 0) {
+      //刷新当前页面的数据
+      getCurrentPages()[getCurrentPages().length - 1].onLoad()
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

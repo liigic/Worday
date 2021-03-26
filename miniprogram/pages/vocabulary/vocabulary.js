@@ -5,18 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
+    scrollTop: undefined,
+  },
+  onTapWord(e) {
 
+  },
+  // 页面监听函数
+  onPageScroll(res) {
+    this.setData({
+      scrollTop: res.scrollTop,
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    var that = this;
-    
-    wx.setNavigationBarTitle({
-      title: ""//页面标题为路由参数
-    })
+  onLoad: function () {
+
   },
 
   /**

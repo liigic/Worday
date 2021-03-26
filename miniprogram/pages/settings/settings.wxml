@@ -1,4 +1,3 @@
-<!-- <l-tab-bar text-color="#bbbbbb" list="{{list}}" /> -->
 <view class="container">
   <view class="top-card">
     <view class="user-info">
@@ -7,51 +6,13 @@
   </view>
   
   <l-card l-class="settings-card" type="primary" plaintext="{{true}}">
-    <l-list title="背单词设置" icon="setting" url="../settings/exercise_set/exercise_set"/>
-    <l-list title="学习提醒" icon="notification" url="../settings/subscribe/subscribe"/>
-    <l-list title="使用帮助" icon="help" url="../settings/help/help"/>
-    <l-list title="关于" icon="like" url="../settings/about/about"/>
+    <view class="all-list">
+      <l-list l-class="list" title="背单词设置" icon="setting" icon-color="#59c7f1" url="../settings/exercise_set/exercise_set"/>
+      <l-list l-class="list" title="学习提醒" icon="notification" icon-color="#59c7f1" bind:lintap="subscribe"/>
+      <l-list l-class="list" title="关于" icon="like" icon-color="#59c7f1" url="../settings/about/about"/>
+    </view>
   </l-card>
-
+  <view class="btn-box">
+    <l-button l-class="list-button" type="default" shape="circle" width="700" height="100" bg-color="#2c3c65" open-type="feedback">意见反馈</l-button>
+  </view>
 </view>
-
-<!-- <view class=" padding radius text-center shadow-blur title_css page {{dark_mode==true?'blk-bg-black':'bg-gradual-blue'}}">
-
-  <view class="cu-bar solid-bottom margin-top  {{dark_mode==true?'blk-bg-grey2':'bg-red light'}}">
-    <view class='action'>
-      <text class="icon-title  {{dark_mode==true?'blk-text-white':'text-red'}}"></text>个性化
-    </view>
-  </view>
-
-  <view class="cu-list menu {{dark_mode==true?'menu-dark':''}}">
-    <view class="cu-item">
-      <text class="{{dark_mode==true?'blk-text-white':'text-grey'}}">🌜 黑夜模式</text>
-      <switch checked="{{dark_mode}}" bindchange="dark_mode" />
-    </view>
-
-    <view class="cu-item arrow">
-      <navigator class="content text-left" hover-class="none" url="../settings/exercise_set/exercise_set" open-type="navigate">
-        <text class="{{dark_mode==true?'blk-text-white':'text-grey'}}">🔮 背单词设置</text>
-      </navigator>
-    </view>
-
-    <view class="cu-item arrow">
-      <navigator class="content text-left" hover-class="none" url="../settings/subscribe/subscribe" open-type="navigate">
-        <text class="{{dark_mode==true?'blk-text-white':'text-grey'}}">⏱ 学习提醒</text>
-      </navigator>
-    </view>
-
-    <view class="cu-item arrow">
-      <navigator class="content text-left" hover-class="none" url="../settings/help/help" open-type="navigate">
-        <text class="{{dark_mode==true?'blk-text-white':'text-grey'}}">❓ 使用帮助</text>
-      </navigator>
-    </view>
-
-    <view class="cu-item arrow bg-white-last">
-      <navigator class="content text-left" hover-class="none" url="../settings/about/about" open-type="navigate">
-        <text class="{{dark_mode==true?'blk-text-white':'text-grey'}}">👦 关于</text>
-      </navigator>
-    </view>
-  </view>
-
-</view> -->

@@ -57,7 +57,7 @@ Page({
 
   },
 
-  retour_accuill: function () {
+  backHome: function () {
     wx.navigateBack({
       delta: 1
     })

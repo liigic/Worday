@@ -1,25 +1,48 @@
-.page {
-  width: 100%;
-  overflow: hidden;
+.aboud-top{
+  font-size: 28rpx;
+  height: 230rpx;
+  width: 750rpx;
+  color: #f3f4f5;
+  background: #2c3c65;
+  /* background: #3963BC; */
+  border-radius: 0 0 55rpx 55rpx;
+  box-shadow: 0px 6px 28px 0px #2c3c65;
+  box-sizing: border-box;
+}
+.about-title{
+  position: absolute;
+  margin: 30rpx 0 0 100rpx;
+  z-index: 2;
+  font-size: 65rpx;
+  font-family: PingFangSC-Regular;
+  transform: skew(-10deg, 0deg);
+  line-height: 70rpx;
+  text-shadow: 0px 0px 20px #59c7f1;
 }
 
-.text-sm {
-  padding-top: 0.3vh;
-  padding-bottom: 0.3vh;
+.set-card{
+  background: #2c3c65 !important;
+  padding: 50rpx 50rpx 60rpx 50rpx !important;
+  margin-top: 150rpx !important;
+  border-radius: 55rpx !important;
+  box-shadow: 0px 6px 28px 0px #2c3c65 !important;
+}
+.content{
+  color: #f3f4f5;
+  text-align:center;
+  align-items:center;
+  justify-content: center;
+  /* margin: auto; */
+  padding: 0 60rpx;
 }
 
-.button-sp-area {
-  margin: 0 auto;
-  padding-top: 15px;
-  width: 60%;
+.content .title{
+  color: #f3f4f5;
+  font-size: 33rpx;
 }
-
-.page__title {
-  font-size: 20px;
-  font-weight: 400;
+.l-radio-group{
+  padding: 15rpx;
 }
-
-.title_css {
-  padding-top: 10vh;
-  padding-bottom: 5vh;
+.l-radio{
+  color: #f3f4f5 !important;
 }

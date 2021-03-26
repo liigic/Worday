@@ -6,16 +6,13 @@
     "pages/exercise/learn_vocab/learn_vocab",
     "pages/exercise/mission_completed/mission_completed",
     "pages/vocabulary/search_result/search_result",
-    "pages/vocabulary/result_list/result_list",
     "pages/settings/exercise_set/exercise_set",
-    "pages/settings/help/help",
-    "pages/settings/subscribe/subscribe",
     "pages/settings/about/about"
   ],
   "tabBar": {
     "color": "#bbbbbb",
-    "selectedColor": "#1839f2",
-    "backgroundColor": "#ffffff",
+    "selectedColor": "#f3f4f5",
+    "backgroundColor": "#2c3c65",
     "borderStyle": "white",
     "list": [
       {
@@ -34,8 +31,7 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarTitleText": "Worday",
-    "navigationBarBackgroundColor": "#1839f2",
+    "navigationBarBackgroundColor": "#2c3c65",
     "navigationBarTextStyle": "white"
   },
   "usingComponents": {
@@ -49,11 +45,9 @@
     "l-collapse-item": "/miniprogram_npm/lin-ui/collapse-item/index",
     "l-search-bar":"/miniprogram_npm/lin-ui/search-bar/index",
     "l-avatar":"/miniprogram_npm/lin-ui/avatar/index",
-    "l-list":"/miniprogram_npm/lin-ui/list/index"
-
-
-
-    
+    "l-list":"/miniprogram_npm/lin-ui/list/index",
+    "l-radio":"/miniprogram_npm/lin-ui/radio/index",
+    "l-radio-group":"/miniprogram_npm/lin-ui/radio-group/index"
   },
   "sitemapLocation": "sitemap.json"
 }

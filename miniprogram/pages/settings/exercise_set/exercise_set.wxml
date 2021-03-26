@@ -1,83 +1,18 @@
-<view class="padding radius text-center shadow-blur title_css page  {{dark_mode==true?'blk-bg-black':'bg-gradual-blue'}}">
-  <view class='box'>
-    <view class="cu-bar btn-group">
-      <button class='cu-btn bg-blue light round shadow' bindtap="settings">返回上一页</button>
+<view class="container">
+  <view class="aboud-top">
+    <view class="about-title">
+      <text>单词设置⚙️</text>
     </view>
   </view>
-
-  <view class="cu-bar solid-bottom margin-top {{dark_mode==true?'blk-bg-grey2':'bg-grey light'}}">
-    <view class='action'>
-      <text class="icon-title {{dark_mode==true?'blk-text-white':'text-grey'}}"></text>背词设置
+  <l-card l-class="set-card" type="primary" plaintext="{{true}}">
+    <view class="content">
+      <text class="title">请选择每天学习新单词的数量：\n</text>
+      <l-radio-group l-class="l-radio-group" placement="column" current="1" none-checked="{{false}}">
+        <l-radio l-class="l-radio" key="1" placement="right" color="#f3f4f5" select-color="#59c7f1">30个</l-radio>
+        <l-radio l-class="l-radio" key="2" placement="right" color="#f3f4f5" select-color="#59c7f1">50个</l-radio>
+        <l-radio l-class="l-radio" key="3" placement="right" color="#f3f4f5" select-color="#59c7f1">100个</l-radio>
+        <l-radio l-class="l-radio" key="4" placement="right" color="#f3f4f5" select-color="#59c7f1">300个</l-radio>
+      </l-radio-group>
     </view>
-  </view>
-  <view class="cu-list menu bg-white-last {{dark_mode==true?'menu-dark':''}}">
-    <view class="cu-item">
-      <view class="content">
-        <view class="{{dark_mode==true?'blk-text-white':'text-grey'}}">每天新词</view>
-      </view>
-      <view class="action">
-        <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
-          <button class="cu-btn round bg-green shadow">
-            <text class="cuIcon-upload"></text>{{freq_number}}个
-          </button>
-        </picker>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class='text-left text-xs text-grey'>设置每天遇见新单词的个数。现设置为{{freq_number}}个。默认30个。设置修改立即生效，当日新词数重置。</view>
-    </view>
-  </view>
-
-  <view class="cu-bar solid-bottom margin-top  {{dark_mode==true?'blk-bg-grey2':'bg-red light'}}">
-    <view class='action'>
-      <text class="icon-title {{dark_mode==true?'blk-text-white':'text-red'}}"></text>词书A：5000高频法语单词
-    </view>
-  </view>
-  <view class="cu-list menu bg-white-last  {{dark_mode==true?'menu-dark':''}}">
-    <view class="cu-item">
-      <view class="{{dark_mode==true?'blk-text-white':'text-grey'}}">基础（共1500词）</view>
-      <switch checked="{{freq_1500}}" bindchange="freq_1500" />
-    </view>
-    <view class="cu-item">
-      <view class="{{dark_mode==true?'blk-text-white':'text-grey'}}">有点水平（共1500词）</view>
-      <switch checked="{{freq_3000}}" bindchange="freq_3000" />
-    </view>
-    <view class="cu-item">
-      <view class="{{dark_mode==true?'blk-text-white':'text-grey'}}">厉害（共2000词）</view>
-      <switch checked="{{freq_5000}}" bindchange="freq_5000" />
-    </view>
-    <view class="cu-item">
-      <view class="text-left text-xs text-grey">5000高频法语单词是根据《A Frequency Dictionary of French》进行整理的。这里分为三个等级：分别是“基础”（1500词）、“有点水平”（1500词）、“厉害”（2000词）。设置修改立即生效，当日新词数重置。</view>
-    </view>
-  </view>
-
-  <view class="cu-bar solid-bottom margin-top  {{dark_mode==true?'blk-bg-grey2':'bg-blue light'}}">
-    <view class='action'>
-      <text class="icon-title {{dark_mode==true?'blk-text-white':'text-blue'}}"></text>词书B：TEF TCF 法语考试词汇
-    </view>
-  </view>
-  <view class="cu-list menu bg-white-last  {{dark_mode==true?'menu-dark':''}}">
-    <view class="cu-item">
-      <view class="{{dark_mode==true?'blk-text-white':'text-grey'}}">TEF-TCF词书</view>
-      <switch checked="{{tef_tcf}}" bindchange="tef_tcf" disabled/>
-    </view>
-    <view class="cu-item">
-      <view class="text-left text-xs text-grey">本词书‍列表未完成，无法使用。请先使用 词书A 。</view>
-    </view>
-  </view>
-  
-  <view class="cu-bar solid-bottom margin-top  {{dark_mode==true?'blk-bg-grey2':'bg-yellow light'}}">
-    <view class='action'>
-      <text class="icon-title {{dark_mode==true?'blk-text-white':'text-yellow'}}"></text>词书C：大学法语四级考试词汇
-    </view>
-  </view>
-  <view class="cu-list menu bg-white-last  {{dark_mode==true?'menu-dark':''}}">
-    <view class="cu-item">
-      <view class="{{dark_mode==true?'blk-text-white':'text-grey'}}">大学法语四级</view>
-      <switch checked="{{cft_4}}" bindchange="cft_4" disabled/>
-    </view>
-    <view class="cu-item">
-      <view class="text-left text-xs text-grey">本词书‍列表未完成，无法使用。请先使用 词书A 。</view>
-    </view>
-  </view>
+  </l-card>
 </view>

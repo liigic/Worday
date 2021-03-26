@@ -1,5 +1,6 @@
 @import 'colorui/icon.wxss';
 @import 'colorui/main.wxss';
 page{
-  background-color: #f3f3f3;
+  background-color: #f3f4f5;
+  font-family: -apple-system, BlinkMacSystemFont, SFProDisplay-Regular;
 }
