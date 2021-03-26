@@ -12,6 +12,6 @@
     </view>
   </l-card>
   <view class="btn-box">
-    <l-button l-class="l-button" type="default" width="230" height="92" shape="circle" bg-color="#2c3c65" bind:lintap="backHome">返回主页</l-button>
+    <l-button l-class="l-button" type="default" width="230" height="92" shape="circle" bg-color="#2c3c65" bind:lintap="backHome">返回</l-button>
   </view>
 </view>

@@ -11,17 +11,21 @@
     <scroll-view class='box' scroll-y bindscrolltoupper="evupper" bindscrolltolower="evlower">
       <view wx:if="{{results}}" >
         <view class='item' wx:for="{{results}}" wx:key="unique" bindtap="goWord" data-word="{{item.word}}" data-translation="{{item.translation}}">
-          <view class='item-name' >单词：{{item.word}}</view>
-          <view class='item-name'></view>
+          <text class='item-name'>{{item.word}}\n</text>
+          <!-- <view class='item-name'>单词：{{item.word}}</view>
           <view class='item-name'>释义：{{item.translation}}</view>
           <view class='item-name'></view>
           <view class='item-name'></view>
+          <view class='item-name'></view> -->
         </view>
       </view>
       <view wx:else>
-        <view class="tt_title">
+        <l-card l-class="tt_title" type="primary" plaintext="{{true}}">
+          <text>需要输入查询的单词 \n or \n 找不到该单词</text>
+        </l-card>
+        <!-- <view class="tt_title">
           <text>需要输入查询的单词 or 找不到该单词</text>
-        </view>
+        </view> -->
       </view>
     </scroll-view>
   </view>

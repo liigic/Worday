@@ -3,7 +3,7 @@
   width: 750rpx;
   background: #2c3c65;
   border-radius: 0 0 55rpx 55rpx;
-  box-shadow: 0px 6px 28px 0px #2c3c65;
+  box-shadow: 0px 3px 23px 0px #2c3c65;
   box-sizing: border-box;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .text-cancel {
-  color: #f3f3f3 !important;
+  color: #f3f4f5 !important;
 }
 
 /* 实时刷新 */
@@ -27,15 +27,21 @@
 
 .tt_title {
   font-size: 40rpx;
-  font-weight: bold;
-  color: #000000;
-  margin: 30rpx;
+  /* font-weight: bold; */
+  color: #f3f4f5;
+  /* margin: 30rpx; */
   text-align: center;
+
+  background: #2c3c65 !important;
+  padding: 100rpx !important;
+  margin-top: 50rpx !important;
+  border-radius: 55rpx !important;
+  box-shadow: 0px 6px 28px 0px #2c3c65 !important;
 }
 
 .box {
-  background: #ffffff;
-
+  background: #f3f4f5;
+  margin-top: 50rpx;
   height: 1080rpx;
 }
 
@@ -44,15 +50,21 @@
 }
 
 .item {
-  padding: 0 50rpx;
-  margin-bottom: 20rpx;
-  background: #dddddd;
+  padding: 30rpx 50rpx;
+  margin: 0rpx 25rpx 20rpx 25rpx;
+  /* margin-bottom: 20rpx; */
+  background: #ffffff;
+  border-radius: 55rpx;
+  box-shadow:0 20rpx 20rpx 8rpx rgba(212,217,223,.5);
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .item-name {
   height: 50rpx;
   line-height: 50rpx;
   font-size: 30rpx;
+  color: #2c3c65;
 }
 
 .item-box {
