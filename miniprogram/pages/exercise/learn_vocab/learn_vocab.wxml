@@ -6,10 +6,10 @@
     <view class="word-container">
       <view class="word-container-top">
         <view class="word-head">{{data.headWord}}</view>
-        <!-- <view class="text-sl">{{learn_word}}</view> -->
         <l-button l-class="phone-speak" special="{{true}}" bind:lintap="speech_word">
           <l-icon l-class="word-speak" size="30" name="soud" color="#2c3c65" />
-          <text>/{{data.content.word.content.usphone}}/{{data.content.word.content.ukphone}}/</text>
+          <text>/{{data.content.word.content.usphone}}/</text>
+          <!-- <text>/{{data.content.word.content.usphone}}/{{data.content.word.content.ukphone}}/</text> -->
         </l-button>
       </view>
       <view class="word-container-bottom">
@@ -24,13 +24,13 @@
             <view class="word-content">
               <view class="word-trans">
                 <view class="word-trans-title">释义</view>
-                <view class="word-trans-content" wx:for="{{data.content.word.content.trans}}">
+                <view class="word-trans-content" wx:for="{{data.content.word.content.trans}}" wx:key="*this">
                   {{item.pos}}.{{item.tranCn}}
                 </view>
               </view>
               <view class="word-sentence">
                 <view class="word-sentence-title">例句</view>
-                <view class="word-sentence-content" wx:for="{{data.content.word.content.sentence.sentences}}">
+                <view class="word-sentence-content" wx:for="{{data.content.word.content.sentence.sentences}}" wx:key="*this">
                   {{item.sContent}}<view></view> {{item.sCn}}</view>
               </view>
             </view>

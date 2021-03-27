@@ -47,7 +47,8 @@ Page({
     backgroundAudioManager.title =  '未知名歌手'
     // backgroundAudioManager.titepnamele = '不详'
     backgroundAudioManager.singer =that.data.data.headWord
-    backgroundAudioManager.src = 'https://dict.youdao.com/dictvoice?audio=' + that.data.data.content.word.content.ukspeech
+    backgroundAudioManager.src = 'https://dict.youdao.com/dictvoice?audio=' + that.data.data.content.word.content.usspeech
+    // backgroundAudioManager.src = 'https://dict.youdao.com/dictvoice?audio=' + that.data.data.content.word.content.ukspeech
   },
   next_vocab(e) {
     let that = this

@@ -9,6 +9,7 @@
     "pages/settings/settings",
     "pages/settings/about/about"
   ],
+  "requiredBackgroundModes": ["audio"],
   "tabBar": {
     "color": "#bbbbbb",
     "selectedColor": "#f3f4f5",
