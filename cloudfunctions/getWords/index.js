@@ -6,11 +6,10 @@ cloud.init({
 })
 
 const db = cloud.database()
-const MAX_LIMIT = 100
 exports.main = async (event, context) => {
-  const countResult = await db.collection('t_dictionary').count()
+  const countResult = await db.collection('t_words').count()
   const total = countResult.total
-  const promise = await db.collection('t_dictionary').skip(event.page * MAX_LIMIT).limit(MAX_LIMIT).get()
+  const promise = await db.collection('t_words').skip(event.page * event.limit).limit(event.limit).get()
   // 等待所有
   return ({
     data: promise,

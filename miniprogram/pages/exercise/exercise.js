@@ -1,46 +1,60 @@
 // pages/exercise/exercise.js
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    userInfo: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    
+    let that = this
+    wx.showLoading({
+      title: '加载中',
+    })
+    setTimeout(function () {
+      that.setData({
+        userInfo: app.globalData.userInfo
+      })
+      wx.hideLoading()
+    }, 1000)
+
+    console.log(that.data.userInfo)
     wx.setNavigationBarTitle({
-      title: ""//页面标题为路由参数
+      title: "" //页面标题为路由参数
     })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function () {},
 
-  },
-
-  onShow: function() {
+  onShow: function () {
     if (getCurrentPages().length != 0) {
       //刷新当前页面的数据
       getCurrentPages()[getCurrentPages().length - 1].onLoad()
     }
   },
-
+  go_study() {
+    wx.navigateTo({
+      url: './learn_vocab/learn_vocab?word',
+    })
+  },
   //认单词
-  start: function() {
+  start: function () {
     wx.navigateTo({
       url: 'learn_vocab/learn_vocab',
     })
   },
 
   //查单词
-  search: function() {
+  search: function () {
     wx.navigateTo({
       url: '../vocabulary/vocabulary',
     })

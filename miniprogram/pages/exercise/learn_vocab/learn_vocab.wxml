@@ -1,15 +1,15 @@
-<view class="container" >
+<view class="container">
   <view class="header">
     <text class='header-desc'>Remember words every day.</text>
   </view>
-  <l-card l-class="card" type="primary" plaintext="{{true}}" >
+  <l-card l-class="card" type="primary" plaintext="{{true}}">
     <view class="word-container">
       <view class="word-container-top">
-        <view class="word-head">headword</view>
+        <view class="word-head">{{data.headWord}}</view>
         <!-- <view class="text-sl">{{learn_word}}</view> -->
-        <l-button l-class="phone-speak" special="{{true}}">
+        <l-button l-class="phone-speak" special="{{true}}" bind:lintap="speech_word">
           <l-icon l-class="word-speak" size="30" name="soud" color="#2c3c65" />
-          <text>/YingBiao/</text>
+          <text>/{{data.content.word.content.usphone}}/{{data.content.word.content.ukphone}}/</text>
         </l-button>
       </view>
       <view class="word-container-bottom">
@@ -18,17 +18,20 @@
             <view class="title" slot="title">
               <view class="word-detail-container">
                 <text>查看释义&例句</text>
-                <l-icon name="down" size="16" color="#999"/>
+                <l-icon name="down" size="16" color="#999" />
               </view>
             </view>
             <view class="word-content">
               <view class="word-trans">
                 <view class="word-trans-title">释义</view>
-                <view class="word-trans-content">n.释义</view>
+                <view class="word-trans-content" wx:for="{{data.content.word.content.trans}}">
+                  {{item.pos}}.{{item.tranCn}}
+                </view>
               </view>
               <view class="word-sentence">
                 <view class="word-sentence-title">例句</view>
-                <view class="word-sentence-content">example example example example example</view>
+                <view class="word-sentence-content" wx:for="{{data.content.word.content.sentence.sentences}}">
+                  {{item.sContent}}<view></view> {{item.sCn}}</view>
               </view>
             </view>
           </l-collapse-item>
@@ -37,7 +40,9 @@
     </view>
   </l-card>
   <view class="botton-view">
-    <l-button l-class="btn-error" type="default" width="230" height="92" shape="circle" plain="{{true}}" bg-color="#f3f4f5" bind:lintap="dont_konw">不认识</l-button>
-    <l-button l-class="btn-success"type="default" width="230" height="92" shape="circle" bg-color="#2c3c65" bind:lintap="next_vocab">下一个</l-button>
+    <l-button l-class="btn-error" type="default" width="230" height="92" shape="circle" plain="{{true}}"
+      bg-color="#f3f4f5" bind:lintap="last_vocab">上一个</l-button>
+    <l-button l-class="btn-success" type="default" width="230" height="92" shape="circle" bg-color="#2c3c65"
+      bind:lintap="next_vocab">下一个</l-button>
   </view>
 </view>

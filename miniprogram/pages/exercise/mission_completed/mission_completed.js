@@ -58,8 +58,8 @@ Page({
   },
 
   backHome: function () {
-    wx.navigateBack({
-      delta: 1
+    wx.switchTab({
+      url: '../exercise',
     })
   },
 

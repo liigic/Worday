@@ -6,16 +6,16 @@
     <l-card l-class="card" type="primary" plaintext="{{true}}">
       <text class="title">考研单词\nVocabulary</text>
       <l-grid l-class="grid">
-          <l-grid-item key="one" slot="one">
-            <view class="num">0</view>
+          <l-grid-item key="one" slot="one" bind:linitemtap="go_study">
+            <view class="num">{{userInfo.study_word}}</view>
             <view class="text">有印象的单词</view>
           </l-grid-item>
-          <l-grid-item key="two" slot="two">
-            <view class="num">30</view>
+          <l-grid-item key="two" slot="two" bind:linitemtap="go_study">
+            <view class="num">{{userInfo.day_word - userInfo.day_study_word}}</view>
             <view class="text">今日新词</view>
           </l-grid-item>
-          <l-grid-item key="three" slot="three">
-            <view class="num">0</view>
+          <l-grid-item key="three" slot="three" bind:linitemtap="go_study">
+            <view class="num">{{userInfo.last_word}}</view>
             <view class="text">今日待复习</view>
           </l-grid-item>
       </l-grid>

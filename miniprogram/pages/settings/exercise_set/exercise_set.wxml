@@ -7,11 +7,11 @@
   <l-card l-class="set-card" type="primary" plaintext="{{true}}">
     <view class="content">
       <text class="title">请选择每天学习新单词的数量：\n</text>
-      <l-radio-group l-class="l-radio-group" placement="column" current="1" none-checked="{{false}}">
-        <l-radio l-class="l-radio" key="1" placement="right" color="#f3f4f5" select-color="#59c7f1">30个</l-radio>
-        <l-radio l-class="l-radio" key="2" placement="right" color="#f3f4f5" select-color="#59c7f1">50个</l-radio>
-        <l-radio l-class="l-radio" key="3" placement="right" color="#f3f4f5" select-color="#59c7f1">100个</l-radio>
-        <l-radio l-class="l-radio" key="4" placement="right" color="#f3f4f5" select-color="#59c7f1">300个</l-radio>
+      <l-radio-group l-class="l-radio-group" placement="column" current="{{userInfo.day_word}}" none-checked="{{false}}" bind:linchange="set_day_word">
+        <l-radio l-class="l-radio" key="30" placement="right" color="#f3f4f5" select-color="#59c7f1">30个</l-radio>
+        <l-radio l-class="l-radio" key="50" placement="right" color="#f3f4f5" select-color="#59c7f1">50个</l-radio>
+        <l-radio l-class="l-radio" key="100" placement="right" color="#f3f4f5" select-color="#59c7f1">100个</l-radio>
+        <l-radio l-class="l-radio" key="300" placement="right" color="#f3f4f5" select-color="#59c7f1">300个</l-radio>
       </l-radio-group>
     </view>
   </l-card>

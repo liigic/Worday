@@ -1,5 +1,6 @@
 //app.js
 App({
+
   onLaunch: function () {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
@@ -13,25 +14,34 @@ App({
         traceUser: true,
       })
     }
+    this.add_user()
+  },
+  add_user() {
+    let that = this
+    wx.cloud.callFunction({
+      name: 'addUser',
+      data: {
+        study_word: 0, // 已学习的单词数量
+        day_word: 30, // 设置每天的学习单词数量
+      }
+    }).then(res => {
+      // if (res.result.data.length > 0)
+      // console.log(res)
+    })
+    that.data_init()
+  },
+  globalData: {
+     userInfo : {}
+  },
+  data_init() {
+    let that = this
+    wx.cloud.callFunction({
+      name: 'getUser'
+    }).then(res => {
+      // if (res.result.data.length > 0)
+      console.log(res.result.user)
+      that.globalData.userInfo = res.result.user
+    })
+  },
 
-    this.globalData = {}
-
-    // wx.setNavigationBarColor({
-    //   frontColor: '#000000',
-    //   backgroundColor: '#ffffff'
-    // })
-
-    // wx.getSystemInfo({
-    //   success: e => {
-    //     this.globalData.StatusBar = e.statusBarHeight;
-    //     let custom = wx.getMenuButtonBoundingClientRect();
-    //     this.globalData.Custom = custom;  
-    //     this.globalData.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
-    //     //适配全面屏底部距离
-    //     if (CustomBar > 75) {
-    //       this.globalData.tabbar_bottom = "y"
-    //     }
-    //   }
-    // })
-  }
 })
