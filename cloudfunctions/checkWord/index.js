@@ -7,9 +7,11 @@ cloud.init({
 const db = cloud.database()
 
 exports.main = async (event, context) => {
+  let inputValue = event.check_word;
   const result = await db.collection('t_dictionary').where({
     word: db.RegExp({
-      regexp: event.check_word,
+      regexp: "\^" + inputValue,
+      // regexp: event.check_word,
       options: 'i'
     })
   }).limit(20).get()
