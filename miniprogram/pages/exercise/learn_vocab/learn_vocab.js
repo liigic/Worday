@@ -139,14 +139,20 @@ Page({
         // console.log(that.data.page)
       })
     } else {
-      wx.showToast({
-        title: '完成！',
-      })
+      // wx.showToast({
+      //   title: '完成！',
+      // })
       console.log("学完了")
       // wx.navigateTo({
-      //   url: 'xxx', // 完成任务后，跳转地址
+      //   url: '../mission_completed/mission_completed', // 完成任务后，跳转地址
       // })
     }
+  },
+
+  backHome: function () {
+    wx.switchTab({
+      url: '../exercise',
+    })
   },
 
   /**

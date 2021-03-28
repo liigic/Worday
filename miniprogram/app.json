@@ -1,12 +1,11 @@
 {
   "pages": [
     "pages/exercise/exercise",
-    "pages/settings/exercise_set/exercise_set",
-    "pages/exercise/mission_completed/mission_completed",
     "pages/exercise/learn_vocab/learn_vocab",
-    "pages/vocabulary/search_result/search_result",
     "pages/vocabulary/vocabulary",
+    "pages/vocabulary/search_result/search_result",
     "pages/settings/settings",
+    "pages/settings/exercise_set/exercise_set",
     "pages/settings/about/about"
   ],
   "requiredBackgroundModes": ["audio"], 

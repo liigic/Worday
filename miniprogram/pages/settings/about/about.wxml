@@ -21,13 +21,15 @@
             </view>
             <view class="aboutme-content">
               <view class="user-info">
-                <l-avatar l-class="user-avatar" l-text-class="user-name" size="100" placement="bottom" text="7ee" src="/images/static/avtar.JPG"/>
+                <l-avatar l-class="user-avatar" l-text-class="user-name" size="100" placement="bottom" text="7ee" src="cloud://wcloud-8g7yq3ydb5aebe1a.7763-wcloud-8g7yq3ydb5aebe1a-1305226230/images/static/avtar.JPG"/>
               </view>
               <view class="list">
-                <view class="list-content">WeChat-ID-> <p>xxx-xxx</p></view>
+                <view class="list-content">WeChatID -> <text bindtap='copyWxID' data-text="{{wxid}}">{{wxid}}</text></view>
+                <!-- <view class="list-content">WeChatID -> <p>Ohh-7ee</p></view> -->
               </view>
               <view class="list">
-                <view class="list-content">Email-> <p>xxx@xxx.xxx</p></view>
+                <view class="list-content">Email -> <text bindtap='copyEmail' data-text="{{email}}">{{email}}</text></view>
+                <!-- <view class="list-content">Email -> <text>sevencifer@7ucifer.cn</text></view> -->
               </view>
             </view>
           </l-collapse-item>

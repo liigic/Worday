@@ -40,7 +40,17 @@
       </view>
     </view>
   </l-card>
-  <l-card l-class="card" type="primary" plaintext="{{true}}" wx:else>
+  <view class="completed-container" type="primary" plaintext="{{true}}" wx:else>
+    <l-card l-class="completed-card" type="primary" plaintext="{{true}}" >
+      <view class="completed-content ">
+        <text class="completed-text">今天的学习任务已经完成了! \n 明天再来吧❤ \n （不来的话越欠越多哦...）\n 也可以去设置改变背词数（第二天生效）</text>
+      </view>
+    </l-card>
+    <view class="completed-btn-box">
+      <l-button l-class="completed-card-btn" type="default" width="230" height="92" shape="circle" bg-color="#2c3c65" bind:lintap="backHome">返回主页</l-button>
+    </view>
+  </view>
+  <!-- <l-card l-class="card" type="primary" plaintext="{{true}}" wx:else>
     <view class="word-container">
       <view class="word-container-top">
         <view class="word-head">需要先学习单词
@@ -49,7 +59,7 @@
           今日单词已学完/复习完</view>
       </view>
     </view>
-  </l-card>
+  </l-card> -->
   <view class="botton-view" wx:if="{{sum != 0}}">
     <l-button l-class="btn-error" type="default" width="230" height="92" shape="circle" plain="{{true}}"
       bg-color="#f3f4f5" bind:lintap="last_vocab">上一个</l-button>

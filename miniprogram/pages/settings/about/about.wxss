@@ -95,6 +95,6 @@
   /* transform: skew(-10deg, 0deg); */
 }
 
-.list-content p{
+.list-content text{
   color: #59c7f1;
 }
