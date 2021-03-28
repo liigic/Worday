@@ -14,7 +14,6 @@
   margin: 30rpx 0 0 100rpx;
   z-index: 2;
   font-size: 65rpx;
-  font-family: PingFangSC-Regular;
   transform: skew(-10deg, 0deg);
   line-height: 70rpx;
   text-shadow: 0px 0px 20px #59c7f1;

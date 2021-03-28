@@ -37,7 +37,6 @@
 }
 
 .word-head {
-  font-family: Chalkboard;
   font-size: 80rpx;
   line-height: 80rpx;
   color: #2c3c65;
@@ -46,7 +45,6 @@
 .phone-speak {
   margin: 10rpx 0 10rpx 10rpx;
   line-height: 40rpx;
-  font-family: Chalkboard;
   font-size: 35rpx;
   color: #8F8F8F;
 }
@@ -93,13 +91,11 @@
 }
 
 .word-trans-title, .word-sentence-title {
-  font-family: PingFangSC-Medium;
   font-size: 28rpx;
   color: #999;
 }
 
 .word-trans-content, .word-sentence-content {
-  font-family: PingFangSC-Light;
   font-size: 24rpx;
   line-height: 25rpx;
   color: #000000;
@@ -139,7 +135,6 @@
 
 .completed-text {
   line-height: 40rpx;
-  font-family: Chalkboard;
   font-size: 28rpx;
   color: #2c3c65;
   text-align:center;
