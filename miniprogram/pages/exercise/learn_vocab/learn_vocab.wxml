@@ -9,7 +9,8 @@
         <!-- <view class="text-sl">{{learn_word}}</view> -->
         <l-button l-class="phone-speak" special="{{true}}" bind:lintap="speech_word">
           <l-icon l-class="word-speak" size="30" name="soud" color="#2c3c65" />
-          <text>/{{data.content.word.content.usphone}}/{{data.content.word.content.ukphone}}/</text>
+          <!-- <text>/{{data.content.word.content.usphone}}/{{data.content.word.content.ukphone}}/</text> -->
+          <text>/{{data.content.word.content.usphone}}/</text>
         </l-button>
       </view>
       <view class="word-container-bottom">
