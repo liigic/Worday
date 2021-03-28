@@ -13,17 +13,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     let that = this
-    wx.showLoading({
-      title: '加载中',
-    })
     setTimeout(function () {
-      that.setData({
-        userInfo: app.globalData.userInfo
+      wx.cloud.callFunction({
+        name: 'getUser'
+      }).then(res => {
+        that.setData({
+          userInfo: res.result.user
+        })
+        console.log(res)
+      })
+      wx.showLoading({
+        title: '加载中',
       })
       wx.hideLoading()
     }, 1000)
-
     console.log(that.data.userInfo)
     wx.setNavigationBarTitle({
       title: "" //页面标题为路由参数

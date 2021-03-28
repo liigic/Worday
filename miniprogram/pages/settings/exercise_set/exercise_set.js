@@ -1,5 +1,4 @@
 // miniprogram/pages/settings/exercise_set/exercise_set.js
-var app = getApp()
 Page({
 
   /**
@@ -14,10 +13,24 @@ Page({
    */
   onLoad: function (options) {
     let that = this
-    that.setData({
-      userInfo: app.globalData.userInfo
-    })
-    console.log(that.data.userInfo)
+    that.data_init()
+  },
+  data_init(){
+    let that = this
+    setTimeout(function () {
+      wx.cloud.callFunction({
+        name: 'getUser'
+      }).then(res => {
+        that.setData({
+          userInfo: res.result.user
+        })
+        console.log(res)
+      })
+      wx.showLoading({
+        title: '加载中',
+      })
+      wx.hideLoading()
+    }, 1000)
   },
   set_day_word(e) {
     let that = this
@@ -25,10 +38,10 @@ Page({
     wx.cloud.callFunction({
       name: 'updateDayWord',
       data: {
-        day_word: e.detail.key
+        day_word: parseInt(e.detail.key)
       }
     }).then(
-      app.data_init()
+      that.data_init()
     )
     wx.showToast({
       title: '设置' + e.detail.key + '个单词',

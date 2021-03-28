@@ -32,17 +32,28 @@ App({
     })
     that.data_init()
   },
-  globalData: {
-    userInfo: {}
-  },
+  // globalData: {
+  //   userInfo: {}
+  // },
   data_init() {
     let that = this
     wx.cloud.callFunction({
       name: 'getUser'
     }).then(res => {
       // if (res.result.data.length > 0)
-      // console.log(res.result.user)
-      that.globalData.userInfo = res.result.user
+      console.log(res)
+      const user = res.result.user
+      if (user.last_study_time != DateUtil.formatDate(new Date())) {
+        wx.cloud.callFunction({
+          name: 'updateUserDayStudy',
+          data: {
+            last_study_time: DateUtil.formatDate(new Date())
+          }
+        })
+        // that.globalData.userInfo = res.result.user
+      } else {
+        // that.globalData.userInfo = res.result.user
+      }
     })
   },
 

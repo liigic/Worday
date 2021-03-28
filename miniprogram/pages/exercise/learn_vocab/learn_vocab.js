@@ -11,6 +11,7 @@ Page({
     study_word: 0,
     day_word: 0,
     day_study_word: 0,
+    type: '', //判断是  复习是one、新词是two、待复习是three
   },
   onLoad: function (options) {
     console.log(options)
@@ -20,28 +21,31 @@ Page({
       study_word: parseInt(options.study_word),
       day_word: parseInt(options.day_word),
       day_study_word: parseInt(options.day_study_word),
+      type: options.type,
     })
     switch (options.type) {
       case 'one':
         that.setData({
           sum: options.study_word,
         })
-        console.log(options.study_word)
+        // console.log(options.study_word)
         break;
       case 'two':
         that.setData({
           // 设置每日的单词 - 今日所学了的单词
-          sum: options.day_word - options.day_study_word,
-          page: options.study_word - 1
+          top: parseInt(options.study_word) + parseInt(options.last_word) + parseInt(options.day_word),
+          sum: parseInt(options.day_word) - parseInt(options.day_study_word),
+          page: parseInt(options.study_word) - 1 + parseInt(options.day_study_word) + parseInt(options.last_word)
         })
-        console.log("two")
+        // console.log("two")
         break;
       case 'three':
         that.setData({
-          sum: options.last_word,
-          top: options.study_word - options.last_word,
+          page: parseInt(options.study_word) -1,
+          sum: parseInt(options.study_word) + parseInt(options.last_word),
+          top: parseInt(options.study_word) + 1,
         })
-        console.log("three")
+        // console.log("three")
         break;
     }
     that.next_vocab()
@@ -87,17 +91,33 @@ Page({
     console.log(e)
     let that = this
     if (e && e.currentTarget.dataset.flag) {
-      console.log('学习成功')
-      wx.cloud.callFunction({
-        name: 'updateDayWord',
-        data: {
-          last_word: that.data.last_word + 1
-        }
-      }).then(res => {
-        console.log(res)
-        // console.log(that.data.data)
-        // console.log(that.data.page)
-      })
+      switch (that.data.type) {
+        case 'one': // 学过的单词不做操作
+          break;
+        case 'two':
+          console.log('学习成功')
+          wx.cloud.callFunction({
+            name: 'updateStundyOne',
+            data: {
+              study_one_word: 1
+            }
+          }).then(res => {
+            // console.log(res)
+            // console.log(that.data.data)
+            // console.log(that.data.page)
+          })
+          break;
+        case 'three':
+          console.log('学习成功')
+          wx.cloud.callFunction({
+            name: 'updateReviewWord'
+          }).then(res => {
+            // console.log(res)
+            // console.log(that.data.data)
+            // console.log(that.data.page)
+          })
+          break;
+      }
     }
     let page = that.data.page + 1
     console.log(page)
@@ -121,9 +141,10 @@ Page({
       wx.showToast({
         title: '完成！',
       })
-      wx.navigateTo({
-        url: 'xxx', // 完成任务后，跳转地址
-      })
+      console.log("学完了")
+      // wx.navigateTo({
+      //   url: 'xxx', // 完成任务后，跳转地址
+      // })
     }
   },
 
