@@ -18,12 +18,13 @@ exports.main = async (event, context) => {
   if (total == 0) {
     await t_user.add({
       data: {
-        _openid: wxContext.OPENID,  
-        study_word: event.study_word,  // 已经学了的单词（有印象的单词）
+        _openid: wxContext.OPENID,
+        study_word: event.study_word, // 已经学了的单词（有印象的单词）
         day_word: event.day_word, // 设置日常的单词
         day_study_word: 0, // 当天所学的单词
         need_word: count.total, // 需要所有学习的单词
         last_word: 0, //之前所学的单词
+        last_study_time: event.last_study_time // 上次学习的日期
       }
     })
   }

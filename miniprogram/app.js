@@ -1,4 +1,5 @@
 //app.js
+var DateUtil = require('./utils/DateUtil.js')
 App({
 
   onLaunch: function () {
@@ -23,6 +24,7 @@ App({
       data: {
         study_word: 0, // 已学习的单词数量
         day_word: 30, // 设置每天的学习单词数量
+        last_study_time: DateUtil.formatDate(new Date())
       }
     }).then(res => {
       // if (res.result.data.length > 0)
@@ -31,7 +33,7 @@ App({
     that.data_init()
   },
   globalData: {
-     userInfo : {}
+    userInfo: {}
   },
   data_init() {
     let that = this
@@ -39,7 +41,7 @@ App({
       name: 'getUser'
     }).then(res => {
       // if (res.result.data.length > 0)
-      console.log(res.result.user)
+      // console.log(res.result.user)
       that.globalData.userInfo = res.result.user
     })
   },

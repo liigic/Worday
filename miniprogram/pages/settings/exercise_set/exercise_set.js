@@ -23,7 +23,7 @@ Page({
     let that = this
     console.log(e.detail.key)
     wx.cloud.callFunction({
-      name: 'updateUser',
+      name: 'updateDayWord',
       data: {
         day_word: e.detail.key
       }

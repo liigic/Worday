@@ -41,15 +41,20 @@ Page({
       getCurrentPages()[getCurrentPages().length - 1].onLoad()
     }
   },
-  go_study() {
+  go_study(e) {
+    let that = this
+    // console.log(e)
     wx.navigateTo({
-      url: './learn_vocab/learn_vocab?word',
+      url: './learn_vocab/learn_vocab?type=' + e.detail.key + '&study_word=' + that.data.userInfo.study_word + '&day_word=' + that.data.userInfo.day_word +
+        '&day_study_word=' + that.data.userInfo.day_study_word + '&last_word=' + that.data.userInfo.last_word,
     })
   },
   //认单词
-  start: function () {
+  start: function (e) {
+    // console.log(e)
+    let that = this
     wx.navigateTo({
-      url: 'learn_vocab/learn_vocab',
+      url: './learn_vocab/learn_vocab?type=' + e.target.dataset.key + '&study_word=' + that.data.userInfo.study_word + '&day_word=' + that.data.userInfo.day_word + '&day_study_word=' + that.data.userInfo.day_study_word + '&last_word=' + that.data.userInfo.last_word,
     })
   },
 

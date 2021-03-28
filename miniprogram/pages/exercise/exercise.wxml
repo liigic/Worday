@@ -21,7 +21,7 @@
       </l-grid>
       <view class="button">
         <l-button l-class="bottom-btn" shape="circle" bg-color="#2c3c65" bind:lintap = "search">查单词 🔍</l-button>
-        <l-button l-class="bottom-btn" shape="circle" bg-color="#2c3c65" bind:lintap = "start">认单词 📖</l-button>
+        <l-button l-class="bottom-btn" shape="circle" bg-color="#2c3c65" bind:lintap = "start" data-key="two">认单词 📖</l-button>
         <!-- <l-button l-class="bottom-btn" shape="circle" bg-color="#2c3c65" icon="edit" icon-size="25" icon-color="#59c7f1" bind:lintap = "start">认单词</l-button> -->
         <!-- <l-button l-class="bottom-btn" shape="circle" bg-color="#2c3c65" icon="research" icon-size="25" icon-color="#59c7f1" bind:lintap = "search">查单词</l-button> -->
     </view>

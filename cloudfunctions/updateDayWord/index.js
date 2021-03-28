@@ -16,10 +16,7 @@ exports.main = async (event, context) => {
     _openid: wxContext.OPENID,
   }).update({
     data: {
-      day_study_word: event.day_study_word,
-      day_word: event.day_word,
       study_word: event.study_word,
-      last_word: event.last_word,
     }
   })
 }
