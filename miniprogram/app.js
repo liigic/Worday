@@ -1,7 +1,5 @@
-//app.js
 var DateUtil = require('./utils/DateUtil.js')
 App({
-
   onLaunch: function () {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
@@ -17,6 +15,7 @@ App({
     }
     this.add_user()
   },
+
   add_user() {
     let that = this
     wx.cloud.callFunction({
@@ -32,9 +31,7 @@ App({
     })
     that.data_init()
   },
-  // globalData: {
-  //   userInfo: {}
-  // },
+
   data_init() {
     let that = this
     wx.cloud.callFunction({
@@ -55,6 +52,5 @@ App({
         // that.globalData.userInfo = res.result.user
       }
     })
-  },
-
+  }
 })

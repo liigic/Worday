@@ -8,7 +8,9 @@
     "pages/settings/exercise_set/exercise_set",
     "pages/settings/about/about"
   ],
+
   "requiredBackgroundModes": ["audio"], 
+
   "tabBar": {
     "color": "#bbbbbb",
     "selectedColor": "#f3f4f5",
@@ -29,11 +31,13 @@
       }
     ]
   },
+
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#2c3c65",
     "navigationBarTextStyle": "white"
   },
+
   "usingComponents": {
     "l-card":"/miniprogram_npm/lin-ui/card/index",
     "l-grid-item": "/miniprogram_npm/lin-ui/grid-item/index",
@@ -48,5 +52,6 @@
     "l-radio":"/miniprogram_npm/lin-ui/radio/index",
     "l-radio-group":"/miniprogram_npm/lin-ui/radio-group/index"
   },
+  
   "sitemapLocation": "sitemap.json"
 }

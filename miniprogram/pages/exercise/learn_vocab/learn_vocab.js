@@ -1,5 +1,5 @@
-// miniprogram/pages/exercise/learn_vocab/learn_vocab.js
 const backgroundAudioManager = wx.getBackgroundAudioManager()
+
 Page({
   data: {
     data: {},
@@ -13,6 +13,7 @@ Page({
     day_study_word: 0,
     type: '', //判断是  复习是one、新词是two、待复习是three
   },
+
   onLoad: function (options) {
     console.log(options)
     let that = this
@@ -80,11 +81,8 @@ Page({
   // 播放读音
   speech_word() {
     let that = this
-    backgroundAudioManager.title = '未知名歌手'
-    // backgroundAudioManager.titepnamele = '不详'
-    backgroundAudioManager.singer = that.data.data.headWord
+    backgroundAudioManager.title = that.data.data.headWord + '\/' + that.data.data.content.word.content.usphone + '\/'
     backgroundAudioManager.src = 'https://dict.youdao.com/dictvoice?audio=' + that.data.data.content.word.content.usspeech
-    // backgroundAudioManager.src = 'https://dict.youdao.com/dictvoice?audio=' + that.data.data.content.word.content.ukspeech
   },
 
   //  next是下一个单词也是开始的第一个单词
@@ -120,6 +118,7 @@ Page({
           break;
       }
     }
+
     let page = that.data.page + 1
     console.log(page)
     that.data.page = page
@@ -143,9 +142,6 @@ Page({
       //   title: '完成！',
       // })
       console.log("学完了")
-      // wx.navigateTo({
-      //   url: '../mission_completed/mission_completed', // 完成任务后，跳转地址
-      // })
     }
   },
 
@@ -155,9 +151,6 @@ Page({
     })
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {},
-  onReady: function () {}
+  //用户点击右上角分享
+  onShareAppMessage: function () {}
 })

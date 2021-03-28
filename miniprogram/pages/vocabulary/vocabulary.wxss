@@ -17,8 +17,6 @@
   color: #f3f4f5 !important;
 }
 
-/* 实时刷新 */
-
 .title {
   line-height: 70rpx;
   font-size: 35rpx;
@@ -26,10 +24,8 @@
 }
 
 .tt_title {
-  font-size: 40rpx;
-  /* font-weight: bold; */
+  font-size: 35rpx;
   color: #f3f4f5;
-  /* margin: 30rpx; */
   text-align: center;
 
   background: #2c3c65 !important;
@@ -52,7 +48,6 @@
 .item {
   padding: 30rpx 50rpx;
   margin: 0rpx 25rpx 20rpx 25rpx;
-  /* margin-bottom: 20rpx; */
   background: #ffffff;
   border-radius: 55rpx;
   box-shadow:0 20rpx 20rpx 8rpx rgba(212,217,223,.5);
@@ -80,5 +75,3 @@
 .item-time {
   float: right;
 }
-
-/*下拉刷新上拉加载  */

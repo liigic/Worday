@@ -1,15 +1,15 @@
-.aboud-top{
+.aboud-top {
   font-size: 28rpx;
   height: 230rpx;
   width: 750rpx;
   color: #f3f4f5;
   background: #2c3c65;
-  /* background: #3963BC; */
   border-radius: 0 0 55rpx 55rpx;
   box-shadow: 0px 6px 28px 0px #2c3c65;
   box-sizing: border-box;
 }
-.about-title{
+
+.about-title {
   position: absolute;
   margin: 30rpx 0 0 100rpx;
   z-index: 2;
@@ -20,81 +20,79 @@
   text-shadow: 0px 0px 20px #59c7f1;
 }
 
-.about-card{
+.about-card {
   background: #2c3c65 !important;
   padding: 50rpx 50rpx 60rpx 50rpx !important;
   margin-top: 150rpx !important;
   border-radius: 55rpx !important;
   box-shadow: 0px 6px 28px 0px #2c3c65 !important;
 }
-.content{
+.content {
   color: #f3f4f5;
   text-align:center;
   align-items:center;
   justify-content: center;
-  /* margin: auto; */
   padding: 0 60rpx;
 }
 
-.content .name{
+.content .name {
   color: #59c7f1;
   font-size: 60rpx;
 }
 
-.content .slogan{
+.content .slogan {
   color: #999;
   font-size: 26rpx;
 }
-.content .version{
+.content .version {
   color: #46a5ce;
   font-size: 23rpx;
 }
 
-.aboutme-container{
+.aboutme-container {
   border-top: 2px #59c7f1 solid;
   margin-top: 10rpx;
 }
 
-.aboutme-container text{
+.aboutme-container text {
   width: 100%;
   font-size: 27rpx;
   color: #999;
 }
 
-.l-title-class{
+.l-title-class {
   padding-left: 0rpx !important;
   padding-right: 0rpx !important;
 }
 
-.l-body-class{
+.l-body-class {
   padding-left: 0 !important;
 }
 
-.aboutme-detail{
+.aboutme-detail {
   display: flex;
   align-items: center;
 }
 
-.aboutme-detail l-icon{
+.aboutme-detail l-icon {
   margin-left: 6rpx;
 }
 
-.user-name{
+.user-name {
   color: #59c7f1 !important;
   font-size: 28rpx !important;
 }
 
-.list{
+.list {
   padding: 8rpx 0;
 }
 
-.list-content{
+.list-content {
   font-size: 26rpx;
   line-height: 26rpx;
   color: #999;
-  /* transform: skew(-10deg, 0deg); */
 }
 
-.list-content text{
+.list-content text {
   color: #59c7f1;
 }

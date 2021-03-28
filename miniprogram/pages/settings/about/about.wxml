@@ -12,7 +12,6 @@
       <view class="aboutme-container">
         <l-collapse>
           <l-collapse-item l-body-class="l-body-class" l-title-class="l-title-class" customTitle="{{true}}" bind:linexpand="show">
-            <!--自定义标题-->
             <view class="title" slot="title">
               <view class="aboutme-detail">
                 <text>联系作者</text>
@@ -25,11 +24,9 @@
               </view>
               <view class="list">
                 <view class="list-content">WeChatID -> <text bindtap='copyWxID' data-text="{{wxid}}">{{wxid}}</text></view>
-                <!-- <view class="list-content">WeChatID -> <p>Ohh-7ee</p></view> -->
               </view>
               <view class="list">
                 <view class="list-content">Email -> <text bindtap='copyEmail' data-text="{{email}}">{{email}}</text></view>
-                <!-- <view class="list-content">Email -> <text>sevencifer@7ucifer.cn</text></view> -->
               </view>
             </view>
           </l-collapse-item>

@@ -1,5 +1,3 @@
-<!-- <l-tab-bar text-color="#bbbbbb" list="{{list}}" /> -->
-
 <view class="container">
   <view class="saerch-card">
     <view class="searchbar">
@@ -12,22 +10,13 @@
       <view wx:if="{{results}}" >
         <view class='item' wx:for="{{results}}" wx:key="unique" bindtap="goWord" data-word="{{item.word}}" data-translation="{{item.translation}}">
           <text class='item-name'>{{item.word}}\n</text>
-          <!-- <view class='item-name'>单词：{{item.word}}</view>
-          <view class='item-name'>释义：{{item.translation}}</view>
-          <view class='item-name'></view>
-          <view class='item-name'></view>
-          <view class='item-name'></view> -->
         </view>
       </view>
       <view wx:else>
         <l-card l-class="tt_title" type="primary" plaintext="{{true}}">
-          <text>需要输入查询的单词 \n or \n 找不到该单词</text>
+          <text>需要输入查询的单词 \n or \n 找不到该单词 \n (💡️ Tips:建议先切换到英文键盘再进行搜索哦)</text>
         </l-card>
-        <!-- <view class="tt_title">
-          <text>需要输入查询的单词 or 找不到该单词</text>
-        </view> -->
       </view>
     </scroll-view>
   </view>
-
 </view>

@@ -4,11 +4,11 @@
       <l-avatar l-class="user-avatar" l-text-class="user-name" size="120" placement="bottom" open-data="{{['userAvatarUrl','userNickName']}}" />
     </view>
   </view>
-  
   <l-card l-class="settings-card" type="primary" plaintext="{{true}}">
     <view class="all-list">
       <l-list l-class="list" title="背单词设置" icon="setting" icon-color="#59c7f1" url="../settings/exercise_set/exercise_set"/>
-      <l-list l-class="list" title="学习提醒" icon="notification" icon-color="#59c7f1" bind:lintap="subscribe"/>
+      <l-list l-class="list" title="学习提醒(待开发)" icon="notification" icon-color="#59c7f1"/>
+      <!-- <l-list l-class="list" title="学习提醒" icon="notification" icon-color="#59c7f1" bind:lintap="onSubscribe"/> -->
       <l-list l-class="list" title="关于" icon="like" icon-color="#59c7f1" url="../settings/about/about"/>
     </view>
   </l-card>

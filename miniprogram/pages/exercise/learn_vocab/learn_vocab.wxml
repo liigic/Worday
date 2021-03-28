@@ -6,7 +6,6 @@
     <view class="word-container">
       <view class="word-container-top">
         <view class="word-head">{{data.headWord}}</view>
-        <!-- <view class="text-sl">{{learn_word}}</view> -->
         <l-button l-class="phone-speak" special="{{true}}" bind:lintap="speech_word">
           <l-icon l-class="word-speak" size="30" name="soud" color="#2c3c65" />
           <!-- <text>/{{data.content.word.content.usphone}}/{{data.content.word.content.ukphone}}/</text> -->
@@ -25,13 +24,13 @@
             <view class="word-content">
               <view class="word-trans">
                 <view class="word-trans-title">释义</view>
-                <view class="word-trans-content" wx:for="{{data.content.word.content.trans}}">
+                <view class="word-trans-content" wx:for="{{data.content.word.content.trans}}" wx:key="trans">
                   {{item.pos}}.{{item.tranCn}}
                 </view>
               </view>
               <view class="word-sentence">
                 <view class="word-sentence-title">例句</view>
-                <view class="word-sentence-content" wx:for="{{data.content.word.content.sentence.sentences}}">
+                <view class="word-sentence-content" wx:for="{{data.content.word.content.sentence.sentences}}" wx:key="sentences">
                   {{item.sContent}}<view></view> {{item.sCn}}</view>
               </view>
             </view>
@@ -50,16 +49,6 @@
       <l-button l-class="completed-card-btn" type="default" width="230" height="92" shape="circle" bg-color="#2c3c65" bind:lintap="backHome">返回主页</l-button>
     </view>
   </view>
-  <!-- <l-card l-class="card" type="primary" plaintext="{{true}}" wx:else>
-    <view class="word-container">
-      <view class="word-container-top">
-        <view class="word-head">需要先学习单词
-          <view></view> or
-          <view></view>
-          今日单词已学完/复习完</view>
-      </view>
-    </view>
-  </l-card> -->
   <view class="botton-view" wx:if="{{sum != 0}}">
     <l-button l-class="btn-error" type="default" width="230" height="92" shape="circle" plain="{{true}}"
       bg-color="#f3f4f5" bind:lintap="last_vocab">上一个</l-button>
