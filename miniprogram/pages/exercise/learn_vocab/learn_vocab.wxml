@@ -2,7 +2,7 @@
   <view class="header">
     <text class='header-desc'>Remember words every day.</text>
   </view>
-  <l-card l-class="card" type="primary" plaintext="{{true}}" wx:if="{{sum != 0}}">
+  <l-card l-class="card" type="primary" plaintext="{{true}}" wx:if="{{sum != top}}&&{{sum != 0}}">
     <view class="word-container">
       <view class="word-container-top">
         <view class="word-head">{{data.headWord}}</view>
@@ -30,7 +30,8 @@
               </view>
               <view class="word-sentence">
                 <view class="word-sentence-title">例句</view>
-                <view class="word-sentence-content" wx:for="{{data.content.word.content.sentence.sentences}}" wx:key="sentences">
+                <view class="word-sentence-content" wx:for="{{data.content.word.content.sentence.sentences}}"
+                  wx:key="sentences">
                   {{item.sContent}}<view></view> {{item.sCn}}</view>
               </view>
             </view>
@@ -40,19 +41,20 @@
     </view>
   </l-card>
   <view class="completed-container" type="primary" plaintext="{{true}}" wx:else>
-    <l-card l-class="completed-card" type="primary" plaintext="{{true}}" >
+    <l-card l-class="completed-card" type="primary" plaintext="{{true}}">
       <view class="completed-content ">
         <text class="completed-text">今天的学习任务已经完成了! \n 明天再来吧❤ \n （不来的话越欠越多哦...）\n 也可以去设置改变背词数（第二天生效）</text>
       </view>
     </l-card>
     <view class="completed-btn-box">
-      <l-button l-class="completed-card-btn" type="default" width="230" height="92" shape="circle" bg-color="#2c3c65" bind:lintap="backHome">返回主页</l-button>
+      <l-button l-class="completed-card-btn" type="default" width="230" height="92" shape="circle" bg-color="#2c3c65"
+        bind:lintap="backHome">返回主页</l-button>
     </view>
   </view>
-  <view class="botton-view" wx:if="{{sum != 0}}">
-    <l-button l-class="btn-error" type="default" width="230" height="92" shape="circle" plain="{{true}}"
-      bg-color="#f3f4f5" bind:lintap="last_vocab">上一个</l-button>
+  <view class="botton-view" wx:if="{{sum != top}}&&{{sum != 0}}">
+    <l-button l-class=" btn-error" type="default" width="230" height="92" shape="circle" plain="{{true}}"
+      bg-color="#f3f4f5" bind:lintap="last_word">上一个</l-button>
     <l-button l-class="btn-success" type="default" width="230" height="92" shape="circle" bg-color="#2c3c65"
-      bind:lintap="next_vocab" data-flag="1">下一个</l-button>
+      bind:lintap="next_word" data-flag="1">下一个</l-button>
   </view>
 </view>
