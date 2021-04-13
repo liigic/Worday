@@ -20,7 +20,7 @@
             </view>
             <view class="aboutme-content">
               <view class="user-info">
-                <l-avatar l-class="user-avatar" l-text-class="user-name" size="100" placement="bottom" text="7ee" src="cloud://wcloud-8g7yq3ydb5aebe1a.7763-wcloud-8g7yq3ydb5aebe1a-1305226230/images/static/avtar.JPG"/>
+                <l-avatar l-class="user-avatar" l-text-class="user-name" size="100" placement="bottom" text="7ee" src="cloud://wcloud-6gp1mwfb92b81443.7763-wcloud-6gp1mwfb92b81443-1305226230/static/avtar.JPG"/>
               </view>
               <view class="list">
                 <view class="list-content">WeChatID -> <text bindtap='copyWxID' data-text="{{wxid}}">{{wxid}}</text></view>
