@@ -1,6 +1,6 @@
 <view class="container">
   <view class="header">
-    <text class='header-desc'>Remember words every day.</text>
+    <!-- <text class='header-desc'>Remember words every day.</text> -->
   </view>
   <l-card l-class="card" type="primary" plaintext="{{true}}" wx:if="{{sum != top}}&&{{sum != 0}}">
     <view class="word-container">

@@ -8,7 +8,7 @@
       <l-grid l-class="grid">
           <l-grid-item key="one" slot="one" bind:linitemtap="go_study">
             <view class="num">{{userInfo.study_word}}</view>
-            <view class="text">有印象的单词</view>
+            <view class="text">已学习</view>
           </l-grid-item>
           <l-grid-item key="two" slot="two" bind:linitemtap="go_study">
             <view class="num">{{userInfo.day_word - userInfo.day_study_word}}</view>
@@ -21,7 +21,7 @@
       </l-grid>
       <view class="button">
         <l-button l-class="bottom-btn" shape="circle" bg-color="#2c3c65" bind:lintap = "search">查单词 🔍</l-button>
-        <l-button l-class="bottom-btn" shape="circle" bg-color="#2c3c65" bind:lintap = "start" data-key="two">认单词 📖</l-button>
+        <l-button l-class="bottom-btn" shape="circle" bg-color="#2c3c65" bind:lintap = "start" data-key="two">记单词 📖</l-button>
         <!-- <l-button l-class="bottom-btn" shape="circle" bg-color="#2c3c65" icon="edit" icon-size="25" icon-color="#59c7f1" bind:lintap = "start">认单词</l-button> -->
         <!-- <l-button l-class="bottom-btn" shape="circle" bg-color="#2c3c65" icon="research" icon-size="25" icon-color="#59c7f1" bind:lintap = "search">查单词</l-button> -->
     </view>

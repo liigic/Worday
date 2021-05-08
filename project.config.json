@@ -39,7 +39,7 @@
   },
   "appid": "wxa14ecb5f7922a849",
   "projectname": "Worday",
-  "libVersion": "2.16.0",
+  "libVersion": "2.16.1",
   "scripts": {
     "beforeUpload": "npx lin-ui-cli load"
   },

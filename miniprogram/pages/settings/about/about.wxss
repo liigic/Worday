@@ -88,8 +88,10 @@
 
 .list-content {
   font-size: 26rpx;
-  line-height: 26rpx;
+  line-height: 30rpx;
   color: #999;
+  text-align: left;
+
 }
 
 .list-content text {

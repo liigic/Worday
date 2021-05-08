@@ -13,7 +13,7 @@ Page({
     // study_word: 0,
     // day_word: 0,
     // day_study_word: 0,
-    type: '', //判断是  复习是one、新词是two、待复习是three
+    type: '', //判断是  已复习是one、新词是two、待复习是three
     userInfo: {},
     last_sum: 0,
     next_sum: 0,
